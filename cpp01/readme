@@ -1,0 +1,152 @@
+## ex00
+
+### Summary
+
+This exercise helps us understand the basic idea of how objects work in C++. Using a simple Zombie example, we learn how a class is created and how objects are made and destroyed. It clearly shows the difference between creating objects on the stack and on the heap. The constructor and destructor messages help us see when a zombie is created and when it is destroyed. Overall, this exercise teaches how memory works and why we must properly manage it when using new and delete.
+
+### Key Takeaways
+
+* Learned how to create a class and use its functions.
+* Understood the difference between stack memory and heap memory.
+* Learned when and why to use new and delete.
+* Saw how constructors and destructors work in real execution.
+* Understood why memory leaks can happen if we don’t delete heap objects.
+
+### How to Run :- 
+
+make
+./zombie
+
+This will:
+Create a zombie on the heap
+Create a zombie on the stack
+Show constructor, announce, and destructor messages
+
+--------------------------------------------------------------------
+
+## ex01
+### Summary
+
+In this exercise, we learn how to create many objects together using an array on the heap. Instead of creating one zombie, we create a whole zombie horde using dynamic memory. We also learn why a default constructor is needed when creating an array with new[]. This exercise helps us understand how to use setters, how objects are created and destroyed in a loop, and how important it is to free memory correctly using delete[].
+
+### Key Takeaways
+
+* Learned how to create a dynamic array of objects using new[].
+* Understood why a default constructor is required for object arrays.
+* Learned how to use a setter function to update values after object creation.
+* Saw how destructors are called for each object when using delete[].
+* Understood the importance of proper memory management to avoid leaks.
+
+### How to Run :- 
+
+make
+./zombie
+
+This will:
+Create a horde (array) of zombies on the heap
+Make each zombie announce itself
+Destroy all zombies using delete[]
+
+--------------------------------------------------------------------
+
+## ex02
+### Summary
+
+This exercise helps us understand the difference between a variable, a pointer, and a reference. We use a simple string example to see how memory addresses work in C++. By printing the address and value of the string, pointer, and reference, we clearly see that a reference is just another name for the same variable, while a pointer stores the address of that variable. This exercise makes references easy to understand.
+
+### Key Takeaways
+
+* Learned the difference between a **string variable**, **pointer**, and **reference**.
+* Understood how to get and print **memory addresses**.
+* Saw that a **reference always refers to the same variable**.
+* Learned that a **pointer stores an address**, not the value itself.
+* Better understanding of basic memory concepts in C++.
+
+### How to Run :- 
+
+make
+./brain
+
+This will:
+Print the memory address of the string
+Print the address stored in the pointer
+Print the address of the reference
+Print the values of all three
+
+--------------------------------------------------------------------
+
+## ex03
+### Summary
+
+This exercise teaches the difference between using references and pointers inside classes. We create a Weapon class and two human classes, HumanA and HumanB. HumanA always has a weapon, so it uses a reference, while HumanB may or may not have a weapon, so it uses a pointer. This exercise clearly shows when to use references and when to use pointers in real programs.
+
+### Key Takeaways
+
+* Learned how to use **references and pointers in classes**.
+* Understood why a reference must be initialized in the constructor.
+* Learned how pointers can be **NULL** and set later.
+* Saw how changing a weapon affects both HumanA and HumanB.
+* Understood real-life use cases for references vs pointers.
+
+### How to Run :- 
+
+make
+./weapon
+
+This will:
+Create a weapon
+Show how HumanA always has a weapon
+Show how HumanB can get a weapon later
+Demonstrate reference vs pointer behavior
+
+--------------------------------------------------------------------
+
+## ex04
+### Summary
+
+In this exercise, we create a program similar to the `sed` command. The program reads a file and creates a new file with the same content, replacing a given string with another string. We learn how to work with files using C++ streams and how to safely handle errors. This exercise also improves understanding of string manipulation without using forbidden functions.
+
+### Key Takeaways
+
+* Learned how to **read from and write to files** using C++.
+* Understood how to use `std::string::find` and `substr`.
+* Learned how to handle **file opening errors**.
+* Saw how to replace text without using `std::string::replace`.
+* Understood the importance of checking input arguments.
+
+### How to Run :- 
+
+make
+./replace file.txt <s1> <s2>
+
+This will:
+Read file.txt
+Create file.txt.replace
+Replace all occurrences of s1 with s2
+
+--------------------------------------------------------------------
+
+## ex05
+### Summary
+
+This exercise introduces function pointers to class member functions. We create a Harl class that prints different messages based on a given level string. Instead of using many if-else statements, we use arrays of strings and pointers to member functions. This exercise helps us understand how to choose and call functions dynamically at runtime.
+
+### Key Takeaways
+
+* Learned how to use **member function pointers**.
+* Understood how to map strings to functions.
+* Learned a cleaner alternative to long if-else chains.
+* Saw how functions can be called **dynamically at runtime**.
+* Improved understanding of advanced C++ syntax.
+
+### How to Run :- 
+
+make
+./harl
+
+This will:
+Call complain() with different levels
+Print messages based on the given level
+Demonstrate use of function pointers
+--------------------------------------------------------------------
+
